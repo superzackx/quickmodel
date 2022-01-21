@@ -1,4 +1,4 @@
-# Quick Model
+# ⏩ Quick Model ⏩
 
 Quick Model is a simple program which creates tensorflow image classifcation models from the input given. No changing code every 1 model!
 
