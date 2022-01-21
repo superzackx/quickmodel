@@ -17,3 +17,5 @@ json_object = json.dumps(dictionary, indnt=4)
 # Writing to sample.json
 with open("gen.json", "w") as outfile:
     outfile.write(json_object)
+    
+execfile('interactive.py')
