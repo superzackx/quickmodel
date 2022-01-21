@@ -1,4 +1,5 @@
 git clone https://github.com/superzackx/quickmodel.git
-pip install -r ./requirements.txt
-cd quickmodel/src
+cd quickmodel
+pip install -r requirements.txt
+cd src
 sudo chmod +x quickmodel.py
