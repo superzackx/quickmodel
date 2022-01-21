@@ -14,6 +14,7 @@ import pathlib
 import json
 
 dictionary = {
+    "model_name": input("Enter Model Name: "),
     "dataset_url": input("Enter Dataset URL: "),
     "data_dir": input("Enter Data Directory Name: "),
     "batch_size": int(input("Enter Batch Size: ")),
@@ -153,3 +154,5 @@ print(
     "This image most likely belongs to {} with a {:.2f} percent confidence."
         .format(class_names[np.argmax(score)], 100 * np.max(score))
 )
+
+model.save(jconfig['model_name'], save_format='h5')
