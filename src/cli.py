@@ -11,11 +11,9 @@ dictionary = {
     "test_name": input("Enter Test Image Name: ")
 }
 
-# Serializing json
-json_object = json.dumps(dictionary, indnt=4)
-
 # Writing to sample.json
 with open("gen.json", "w") as outfile:
-    outfile.write(json_object)
+    json.dump(dictionary, outfile)
     
-execfile('interactive.py')
+
+exec(open("./interactive.py").read())
