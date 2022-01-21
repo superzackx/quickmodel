@@ -11,7 +11,7 @@ from tensorflow.keras.models import Sequential
 import matplotlib.pyplot as plt
 import pathlib
 
-f = open('config.json')
+f = open('gen.json')
 jconfig = json.load(f)
 
 dataset_url = jconfig['dataset_url']
