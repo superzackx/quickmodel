@@ -4,10 +4,15 @@ Quick Model is a simple program which creates tensorflow image classifcation mod
 
 ## Usage
 
-1. Clone the repo with ```git clone https://github.com/superzackx/quickmodel.git``` 
-2. CD into ```src```, and run ```chmod +x cli.py``` - This makes the script executable and it can now take input. 
-3. This once finished will auto run ```interactive.py``` which is the tensorflow code. Play around with it and customize it as you want.
+1. Run ```wget https://raw.githubusercontent.com/superzackx/quickmodel/main/scripts/installer.sh``` to download the installer file.
+2. Run ```sh installer.sh``` to run the installer.
+3. You can now run ```./quickmodel.py```
+
+## How it works
+
+The file takes input from the console and saves it to a JSON file called gen.json. This must be created from before. The interactive.py has all the tensorflow code in it which actually runs and creates the model for you. 
 
 ## New Features
 
 1. I'll be releasing new scripts each month + packaging the scripts into one Windows 10 executable. 
+
