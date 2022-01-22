@@ -12,17 +12,19 @@ from tensorflow.keras.models import Sequential
 import matplotlib.pyplot as plt
 import pathlib
 import json
+from colorama import Fore, Back, Style
+
 
 dictionary = {
-    "model_name": input("Enter Model Name: "),
-    "dataset_url": input("Enter Dataset URL: "),
-    "data_dir": input("Enter Data Directory Name: "),
-    "batch_size": int(input("Enter Batch Size: ")),
-    "img_height": int(input("Enter Image Height: ")),
-    "img_width": int(input("Enter Image Width: ")),
-    "epochs": int(input("Enter Number of Epochs: ")),
-    "test_url": input("Enter Test Image URL: "),
-    "test_name": input("Enter Test Image Name: ")
+    "model_name": input(Fore.YELLOW + "Enter Model Name: "),
+    "dataset_url": input(Fore.YELLOW + "Enter Dataset URL: "),
+    "data_dir": input(Fore.YELLOW + "Enter Data Directory Name: "),
+    "batch_size": int(input(Fore.YELLOW + "Enter Batch Size: ")),
+    "img_height": int(input(Fore.YELLOW + "Enter Image Height: ")),
+    "img_width": int(input(Fore.YELLOW + "Enter Image Width: ")),
+    "epochs": int(input(Fore.YELLOW + "Enter Number of Epochs: ")),
+    "test_url": input(Fore.YELLOW + "Enter Test Image URL: "),
+    "test_name": input(Fore.YELLOW + "Enter Test Image Name: ")
 }
 
 # Writing to sample.json
@@ -57,7 +59,7 @@ val_ds = tf.keras.utils.image_dataset_from_directory(
     batch_size=batch_size)
 
 class_names = train_ds.class_names
-print(class_names)
+print(Fore.GREEN + class_names)
 
 plt.figure(figsize=(10, 10))
 for images, labels in train_ds.take(1):
@@ -77,7 +79,7 @@ normalized_ds = train_ds.map(lambda x, y: (normalization_layer(x), y))
 image_batch, labels_batch = next(iter(normalized_ds))
 first_image = image_batch[0]
 # Notice the pixel values are now in `[0,1]`.
-print(np.min(first_image), np.max(first_image))
+print(Fore.GREEN + np.min(first_image), np.max(first_image))
 
 num_classes = len(class_names)
 
@@ -150,7 +152,7 @@ img_array = tf.expand_dims(img_array, 0)  # Create a batch
 predictions = model.predict(img_array)
 score = tf.nn.softmax(predictions[0])
 
-print(
+print(Fore.GREEN + 
     "This image most likely belongs to {} with a {:.2f} percent confidence."
         .format(class_names[np.argmax(score)], 100 * np.max(score))
 )
