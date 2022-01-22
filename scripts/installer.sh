@@ -3,4 +3,4 @@ cd quickmodel
 pip install -r requirements.txt 
 cd src
 sudo chmod +x quickmodel.py
-print "You have successfully installed QuickModel by SuperZackX."
+echo "You have successfully installed QuickModel by SuperZackX."
