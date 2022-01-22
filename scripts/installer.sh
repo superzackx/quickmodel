@@ -5,4 +5,4 @@ cd src
 sudo chmod +x quickmodel.py
 RED='\033[0;31m'
 NC='\033[0m' # No Color
-printf "You have successful installed ${RED}QuickModel by SuperZackX.${NC}"
+printf "You have successful installed ${RED}QuickModel by SuperZackX.${NC}\n"
