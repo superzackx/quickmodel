@@ -11,3 +11,4 @@ cat << "EOF"
  \__\_\\__,_|_|\___|_|\_\_|  |_|\___/ \__,_|\___|_|
 
 EOF
+printf "QuickModel has been installed."
