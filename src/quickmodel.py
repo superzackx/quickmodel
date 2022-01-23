@@ -15,9 +15,9 @@ import json
 from colorama import Fore, Back, Style
 import pyfiglet
 
-asciiprinter = pyfiglet.figlet_format("QuickModel")
+asciiprinter = pyfiglet.figlet_format("QuickModel", justify="center")
 print(asciiprinter)
-asciiprinter1 = pyfiglet.figlet_format("By SuperZackX", font = "slant")
+asciiprinter1 = pyfiglet.figlet_format("By SuperZackX", font = "slant", font="center")
 print(asciiprinter1)
 
 dictionary = {
