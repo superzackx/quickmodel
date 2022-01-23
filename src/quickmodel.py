@@ -13,7 +13,12 @@ import matplotlib.pyplot as plt
 import pathlib
 import json
 from colorama import Fore, Back, Style
+import pyfiglet
 
+asciiprinter = pyfiglet.figlet_format("QuickModel", font = "doh" )
+print(asciiprinter)
+asciiprinter1 = pyfiglet.figlet_format("By SuperZackX")
+print(asciiprinter1)
 
 dictionary = {
     "model_name": input(Fore.YELLOW + "Enter Model Name: "),
