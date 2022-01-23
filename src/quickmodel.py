@@ -17,7 +17,7 @@ import pyfiglet
 
 asciiprinter = pyfiglet.figlet_format("QuickModel", justify="center")
 print(asciiprinter)
-asciiprinter1 = pyfiglet.figlet_format("By SuperZackX", font = "slant", font="center")
+asciiprinter1 = pyfiglet.figlet_format("By SuperZackX", font = "slant", justify="center")
 print(asciiprinter1)
 
 dictionary = {
