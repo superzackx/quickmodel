@@ -17,31 +17,12 @@ import pyfiglet
 import sys
 
 asciiprinter = pyfiglet.figlet_format("QuickModel", justify="center")
-print(asciiprinter)
+print(Fore.LIGHTGREEN_EX + asciiprinter)
 asciiprinter1 = pyfiglet.figlet_format("By SuperZackX", font = "slant", justify="center")
-print(asciiprinter1)
+print(Fore.LIGHTBLUE_EX + asciiprinter1)
 
-def newModel:
+def noInputModel():
     
-    asciiprinter3 = pyfiglet.figlet_format("New Model", justify="center")
-    print(asciiprinter3)
-    
-    dictionary = {
-        "model_name": input(Fore.YELLOW + "Enter Model Name: "),
-        "dataset_url": input(Fore.YELLOW + "Enter Dataset URL: "),
-        "data_dir": input(Fore.YELLOW + "Enter Data Directory Name: "),
-        "batch_size": int(input(Fore.YELLOW + "Enter Batch Size: ")),
-        "img_height": int(input(Fore.YELLOW + "Enter Image Height: ")),
-        "img_width": int(input(Fore.YELLOW + "Enter Image Width: ")),
-        "epochs": int(input(Fore.YELLOW + "Enter Number of Epochs: ")),
-        "test_url": input(Fore.YELLOW + "Enter Test Image URL: "),
-        "test_name": input(Fore.YELLOW + "Enter Test Image Name: ")
-    }
-
-    # Writing to sample.json
-    with open("gen.json", "w") as outfile:
-        json.dump(dictionary, outfile)
-
     f = open('gen.json')
     jconfig = json.load(f)
 
@@ -169,6 +150,35 @@ def newModel:
     )
 
     model.save(jconfig['model_name'], save_format='h5')
-    
+
+
+def newModel():
+
+	dictionary = {
+	       "model_name": input(Fore.YELLOW + "Enter Model Name: "),
+	       "dataset_url": input(Fore.YELLOW + "Enter Dataset URL: "),
+	       "data_dir": input(Fore.YELLOW + "Enter Data Directory Name: "),
+	       "batch_size": int(input(Fore.YELLOW + "Enter Batch Size: ")),
+	       "img_height": int(input(Fore.YELLOW + "Enter Image Height: ")),
+	       "img_width": int(input(Fore.YELLOW + "Enter Image Width: ")),
+	       "epochs": int(input(Fore.YELLOW + "Enter Number of Epochs: ")),
+	       "test_url": input(Fore.YELLOW + "Enter Test Image URL: "),
+	       "test_name": input(Fore.YELLOW + "Enter Test Image Name: ")
+	}
+
+	with open("gen.json", "w") as outfile:
+		json.dump(dictionary, outfile)
+
+	noInputModel()
+
+
 if "-noinput" in sys.argv:
-    newModel();
+	asciiprinter3 = pyfiglet.figlet_format("New Model", justify="center", font="smslant")
+	print(Fore.YELLOW + asciiprinter3)
+	noInputModel()
+    
+if "-new" in sys.argv:
+	asciiprinter3 = pyfiglet.figlet_format("New Simple Model", justify="center", font="smslant")
+	print(Fore.YELLOW + asciiprinter3)
+	newModel()
+		
