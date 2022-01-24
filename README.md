@@ -12,7 +12,7 @@ Quick Model is a simple program which creates tensorflow image classifcation mod
 
 You can currently enter two arguements:
 
-```-new``` : This creates a new model by taking input from the terminal and then saving it to the config file.
+```-new``` : This creates a new model by taking input from the terminal and then saving it to the config file. <br>
 ```-noinput```: This directly reads from the config file and generates a model. 
 
 ## How it works
