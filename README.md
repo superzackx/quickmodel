@@ -6,7 +6,7 @@ Quick Model is a simple program which creates tensorflow image classifcation mod
 
 1. Python3 and Pip3
 2. Git
-3. A linux enviorment(or something with sh and chmod)
+3. A linux/unix enviorment(or something with sh and chmod)
 
 
 ## Usage
