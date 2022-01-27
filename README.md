@@ -2,9 +2,16 @@
 
 Quick Model is a simple program which creates tensorflow image classifcation models from the input given. No changing code every 1 model!
 
+## Requirements
+
+1. Python3 and Pip3
+2. Git
+3. A linux enviorment(or something with sh and chmod)
+
+
 ## Usage
 
-1. Run ```wget https://raw.githubusercontent.com/superzackx/quickmodel/main/scripts/installer.sh``` to download the installer file.
+1. Run ```wget https://raw.githubusercontent.com/superzackx/quickmodel/main/scripts/installer.sh``` to download the installer file.(or just download it)
 2. Run ```sh installer.sh``` to run the installer.
 3. You can now run ```./quickmodel.py``` to check.
 
