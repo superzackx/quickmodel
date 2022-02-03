@@ -9,11 +9,20 @@ Quick Model is a simple program which creates tensorflow image classifcation mod
 3. A linux/unix enviorment(or something with sh and chmod)
 
 
-## Usage
+## Installation
 
 1. Run ```wget https://raw.githubusercontent.com/superzackx/quickmodel/main/scripts/installer.sh``` to download the installer file.(or just download it)
 2. Run ```sh installer.sh``` to run the installer.
 3. You can now run ```./quickmodel.py``` to check.
+
+### Windows Help
+
+For Windows 10, there are two options.
+
+1. WSL
+2. Git Bash
+
+You can run the commands for a Linux installation in these enviorments as they provide the tools needed. 
 
 ## Arugements
 
